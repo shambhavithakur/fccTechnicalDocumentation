@@ -186,7 +186,9 @@ hr:before {
   width: 100%;
   border: 1px solid rgb(240, 240, 240);
 }
-
+pre {
+  overflow-x: auto;
+}
 code,
 pre {
   background: rgb(240, 240, 240);
@@ -278,6 +280,5 @@ Media queries
   }
   pre {
     max-width: 80vw;
-    overflow-x: auto;
   }
 }
