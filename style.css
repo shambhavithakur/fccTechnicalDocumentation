@@ -234,8 +234,8 @@ Media queries
   }
   .top-bar {
     padding-left: 40px;
-    padding-right: 40px;
-    justify-content: center;
+    /* padding-right: 280px; */
+    justify-content: flex-start;
   }
   .menu-button {
     display: none;
