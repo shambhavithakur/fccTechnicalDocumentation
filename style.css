@@ -197,8 +197,13 @@ pre > code {
   padding: 2px 4px;
   font-size: 120%;
 }
+.save-button-name {
+  font-size: 120%;
+  text-transform: none;
+}
 .node-module-list code,
-#use p > code {
+#use p > code,
+.save-button-name {
   font-size: 125%;
 }
 #use p > code {
@@ -279,6 +284,6 @@ Media queries
     font-size: 40px;
   }
   pre {
-    max-width: 80vw;
+    max-width: 75vw;
   }
 }
