@@ -235,6 +235,7 @@ Media queries
   .top-bar {
     padding-left: 40px;
     padding-right: 40px;
+    justify-content: center;
   }
   .menu-button {
     display: none;
@@ -247,6 +248,7 @@ Media queries
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 0;
+    padding-left: 14px;
   }
 }
 @media screen and (min-width: 1321px) {
