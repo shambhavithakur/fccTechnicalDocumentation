@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Node.js Primer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Source+Sans+Pro:600,700"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <div class="menu-button">Menu</div>
+      <img class="top-bar-img" src="nodejs-logo.png" alt="Node.js logo" />
+      <p class="top-bar-text">The Mastering Web Development Series</p>
+    </header>
+    <nav id="navbar">
+      <header><h1>Node.js Primer</h1></header>
+      <ul>
+        <li><a href="#introduction" class="nav-link">Introduction</a></li>
+        <li>
+          <a href="#primary_features" class="nav-link">Primary Features</a>
+        </li>
+        <li>
+          <a href="#specific_benefits" class="nav-link">Specific Benefits</a>
+        </li>
+        <li><a href="#installation" class="nav-link">Installation</a></li>
+        <li><a href="#use" class="nav-link">Use</a></li>
+        <li><a href="#reference" class="nav-link">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <div id="main-doc-container">
+        <section class="main-section" id="introduction">
+          <header><h2>Introduction</h2></header>
+          <div class="main-section__details">
+            <p>
+              Shopping and social-media websites and other task-based
+              web&nbsp;applications are expected to retrieve, transfer, and
+              display data in real time. For example, a shopping website must
+              retrieve up-to-date product data from a database server and
+              display the data to users dynamically. You don't want the users to
+              wait until a web&nbsp;developer adds the data to the website code.
+            </p>
+            <p>
+              If you want to build task-based, dynamic web&nbsp;applications,
+              you need something more than HTML, CSS, and client-side
+              JavaScript, which typically output hard-coded content. You need a
+              suitable server-side technology. Node.js is one such technology.
+              This primer discusses the features and benefits of Node and
+              explains how you can use Node for Windows to perform simple
+              server-side tasks.
+            </p>
+          </div>
+        </section>
+        <hr />
+        <section class="main-section" id="primary_features">
+          <header><h2>Primary Features</h2></header>
+          <div class="main-section__details">
+            <p>
+              Node is a runtime environment that interprets and runs JavaScript
+              code on the server side. Node is both open source and platform
+              independent. Anyone who wants to use Node can
+              <a href="https://nodejs.org/en/download/" target="_blank"
+                >download</a
+              >
+              and install it on a standard computer or server operating system
+              (OS).
+            </p>
+            <p>
+              Because Node runs on an OS directly, it does not support
+              browser-specific JavaScript application programming interfaces
+              (APIs). Instead, it is configured to work with traditional OS
+              APIs, including hypertext transfer protocol (HTTP) and file system
+              libraries.
+            </p>
+            <p>
+              To enable task automation, Node comes bundled with a core set of
+              files, each of which is preconfigured to perform a specific task.
+              Each file in this core set is called a module. Examples of
+              preconfigured Node&nbsp;modules include the following:
+            </p>
+            <ul>
+              <li>
+                <strong><code>http</code></strong
+                >: To transfer data using hyper text transfer protocol (HTTP),
+                use the <code>http</code>&nbsp;module.
+              </li>
+              <li>
+                <strong><code>console</code></strong
+                >: This module makes a simple debugging console available to
+                you.
+              </li>
+              <li>
+                <strong><code>path</code></strong
+                >: If you want to work with file and directory paths, use the
+                <code>path</code>&nbsp;module.
+              </li>
+            </ul>
+            <p>
+              You are not restricted to using the core set of modules, however.
+              You can also employ third-party modules and create your own
+              modules to perform common tasks.
+            </p>
+          </div>
+        </section>
+        <hr />
+        <section class="main-section" id="specific_benefits">
+          <header><h2>Specific Benefits</h2></header>
+          <div class="main-section__details">
+            <p>Node offers the following benefits to &nbsp;developers:</p>
+            <ul>
+              <li>
+                <strong>Familiarity and focus</strong>: If you use Node, you can
+                build an entire web&nbsp;application using JavaScript. You don't
+                have to switch between different technologies for the client and
+                server sides.
+              </li>
+              <li>
+                <strong>Up-to-date language</strong>: JavaScript is continuously
+                being improved. It offers a simplified syntax and code structure
+                and compatibility with recent upgrades to web-server technology.
+                Further, many new and popular languages, such as CoffeeScript
+                and LiveScript, can easily be converted into JavaScript.
+                Therefore, you can also write server-side code for Node in these
+                new languages.
+              </li>
+              <li>
+                <strong>Efficiency</strong>: You can quickly solve common
+                web-development problems with Node. You can also be assured that
+                applications that you build with Node have optimized throughput
+                and are scalable.
+              </li>
+              <li>
+                <strong>Reusability</strong>: Numerous reusable modules and
+                libraries are available for Node today, and you can quickly
+                install these modules and libraries using the node package
+                manager (NPM).
+              </li>
+              <li>
+                <strong>Extensive support</strong>: Node is supported on most
+                web-hosting platforms. In addition, it has a vibrant and helpful
+                community of developers and third-party module providers. This
+                means that you can easily resolve any problems during the
+                installation and use of Node-based web&nbsp;applications.
+              </li>
+            </ul>
+          </div>
+        </section>
+        <hr />
+        <section class="main-section" id="installation">
+          <header><h2>Installation</h2></header>
+          <div class="main-section__details">
+            <p>
+              To install a stable version of Node on Windows, perform the
+              following steps:
+            </p>
+            <ol>
+              <li>
+                Go to
+                <a href="https://nodejs.org/en/" target="_blank"
+                  >https://nodejs.org/en/</a
+                >.
+              </li>
+              <li>
+                Select the button that contains the text "Recommended for most
+                users". This will initiate the download of the most recent,
+                recommended version of the Node installation file. This file
+                will be in the Microsoft Installer (MSI) format and have a .msi
+                extension.
+              </li>
+              <li>
+                In the Save As dialog box that opens, browse to the folder where
+                you want to save the Node installation file, and then click
+                <strong>Save</strong>.
+              </li>
+              <li>
+                After the installation file has been downloaded, access the
+                folder were you saved the file and double-click the file.
+              </li>
+              <li>Follow the default installation prompts to install Node.</li>
+            </ol>
+            <p>
+              An alternative and quicker way to install Node is to use the
+              <a href="https://chocolatey.org/about" target="_blank"
+                >Chocolatey</a
+              >
+              package manager. To install Node with Chocolatey, perform the
+              following steps:
+            </p>
+            <ol>
+              <li>
+                Install Chocolatey using the instructions available at
+                <a href="https://chocolatey.org/install" target="_blank"
+                  >https://chocolatey.org/install</a
+                >.
+              </li>
+              <li>
+                Install Node by running the following command from the command
+                line or the PowerShell:<br />
+                <pre><code>choco install nodejs-lts</code></pre>
+              </li>
+            </ol>
+            <h3>Verifying Your Installation</h3>
+            <p>
+              After you are through with the installation steps, both Node and
+              NPM should be installed on your computer. You can verify these
+              installations by running the following commands at the command
+              prompt separately:
+            </p>
+            <ul class="node-npm-commands">
+              <li>
+                <pre><code>node -v</code></pre>
+              </li>
+              <li>
+                <pre><code>npm -v</code></pre>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <hr />
+        <section class="main-section" id="use">
+          <header><h2>Use</h2></header>
+          <div class="main-section__details">
+            <p>
+              You can use the modules of Node to build various types of
+              &nbsp;applications. For example, you can build a simple
+              web&nbsp;server with the <code>http</code>&nbsp;module.
+            </p>
+            <h3>Building a Web&nbsp;Server</h3>
+            <p>
+              Suppose you want to build a web&nbsp;server named test-node that
+              listens for any kind of HTTP request at
+              <a href="http://127.0.0.1:8000/" target="_blank"
+                >http://127.0.0.1:8000/</a
+              >. When a request is received, test-node responds with the string
+              "Hello World". You can perform the following steps to build
+              test-node:
+            </p>
+            <ol>
+              <li>Open the command-line utility.</li>
+              <li>
+                Run the following command to create a folder named test-node:
+                <pre><code>mkdir test-node</code></pre>
+              </li>
+              <li>
+                Run the following command to browse to the test-node folder:
+                <pre><code>cd test-node</code></pre>
+              </li>
+              <li>In a text editor, create a file named hello.js.</li>
+              <li>
+                In the hello.js file, paste the following code:
+                <pre><code>// Load HTTP module
+var http = require("http");
+                    
+// Create HTTP server and listen on port 8000 for requests
+http.createServer(function(request, response) {
+                    
+  // Set the response HTTP header with HTTP status and Content type
+  response.writeHead(200, {'Content-Type': 'text/plain'});
+                       
+  // Send the response body "Hello World"
+  response.end('Hello World\n');
+}).listen(8000);
+                    
+// Print URL for accessing server
+console.log('Server running at http://127.0.0.1:8000/');</code></pre>
+              </li>
+              <li>Save the hello.js file in the test-node folder.</li>
+              <li>
+                At the command prompt, run the following command:
+                <pre><code>node "hello.js"</code></pre>
+              </li>
+              <li>
+                In a web&nbsp;browser, access
+                <a href="http://127.0.0.1:8000/" target="_blank"
+                  >http://127.0.0.1:8000/</a
+                >. You should see the text "Hello World" in the upper left
+                corner of the &nbsp;page that opens.
+              </li>
+            </ol>
+          </div>
+        </section>
+        <hr />
+        <section class="main-section" id="reference">
+          <header><h2>Reference</h2></header>
+          <p>
+            The content on this page is mostly adapted and, at some places, used
+            as is from the Node documentation available at
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction"
+              target="_blank"
+              >MDN</a
+            >.
+          </p>
+        </section>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
