@@ -82,7 +82,7 @@
               Each file in this core set is called a module. Examples of
               preconfigured Node&nbsp;modules include the following:
             </p>
-            <ul>
+            <ul class="node-module-list">
               <li>
                 <strong><code>http</code></strong
                 >: To transfer data using hyper text transfer protocol (HTTP),
@@ -255,13 +255,13 @@
                 <pre><code>// Load HTTP module
 var http = require("http");
                     
-// Create HTTP server and listen on port 8000 for requests
+// Create HTTP server and listen on port 8000
 http.createServer(function(request, response) {
                     
-  // Set the response HTTP header with HTTP status and Content type
+  // Set response HTTP header
   response.writeHead(200, {'Content-Type': 'text/plain'});
                        
-  // Send the response body "Hello World"
+  // Send response text
   response.end('Hello World\n');
 }).listen(8000);
                     

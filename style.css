@@ -191,11 +191,17 @@ code,
 pre {
   background: rgb(240, 240, 240);
 }
-code {
+pre > code {
   padding: 2px 4px;
+  font-size: 120%;
+}
+.node-module-list code,
+#use p > code {
   font-size: 125%;
 }
-
+#use p > code {
+  background: none;
+}
 pre {
   padding: 16px;
   border-bottom: 1px solid rgba(129, 129, 129, 0.5);
@@ -212,14 +218,13 @@ ul code {
 Media queries
 --------------------------------------------------------------*/
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 799px) {
   #main-doc-container > section {
     max-width: 680px;
   }
 }
 @media screen and (min-width: 1180px) {
-  html,
-  code {
+  html {
     font-size: 120%;
   }
   #main-doc > section:first-child h2 {
@@ -270,5 +275,9 @@ Media queries
   }
   #main-doc-container > section:first-child h2 {
     font-size: 40px;
+  }
+  pre {
+    max-width: 80vw;
+    overflow-x: auto;
   }
 }
