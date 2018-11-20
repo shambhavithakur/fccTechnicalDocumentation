@@ -97,7 +97,7 @@ li {
   bottom: 0;
   width: 280px;
   padding: 68px 0 40px;
-  border-right: 2px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgb(240, 240, 240);
   background: #fff;
   font-size: 90%;
   overflow-y: auto;
@@ -174,17 +174,19 @@ h2 {
   border-bottom: 1px solid rgb(19, 19, 19);
 }
 hr {
-  width: 100%;
-  /* position: relative; */
-  /* left: -280px; */
-  /* left: 0;
-  right: 0; */
   padding: 0;
-  margin: 0 auto;
-  border-color: rgba(0, 0, 0, 0.05);
-  border-width: 2px 0 0;
-  overflow: hidden;
+  border: none;
 }
+hr:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid rgb(240, 240, 240);
+}
+
 code,
 pre {
   background: rgb(240, 240, 240);
@@ -227,9 +229,6 @@ Media queries
     padding-left: 200px;
     padding-right: 0;
   }
-  /* hr {
-    left: -80px;
-  } */
   #navbar {
     transform: translateX(0);
   }
@@ -256,9 +255,6 @@ Media queries
     padding-left: 80px;
     padding-right: 24px;
   }
-  /* hr {
-    left: -80px;
-  } */
 }
 @media screen and (min-width: 1555px) {
   #main-doc-container {
@@ -266,9 +262,13 @@ Media queries
     padding-right: 440px;
   }
 }
-@media screen and (max-width: 1179px) {
-  /* hr {
-    left: 0;
-    right: 0;
-  } */
+@media screen and (max-width: 799px) {
+  #main-doc-container {
+    padding-left: 32px;
+    padding-right: 32px;
+    margin: 0 auto;
+  }
+  #main-doc-container > section:first-child h2 {
+    font-size: 40px;
+  }
 }
