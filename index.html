@@ -12,7 +12,17 @@
   </head>
   <body>
     <header class="top-bar">
-      <div class="menu-button">Menu</div>
+      <button
+        type="button"
+        role="button"
+        aria-label="Open navigation menu"
+        class="open-button"
+      >
+        <div class="bar-container">
+          <span class="bars bar1"></span> <span class="bars bar2"></span>
+          <span class="bars bar3"></span>
+        </div>
+      </button>
       <img class="top-bar-img" src="nodejs-logo.png" alt="Node.js logo" />
       <p class="top-bar-text">The Mastering Web Development Series</p>
     </header>
@@ -31,6 +41,7 @@
         <li><a href="#reference" class="nav-link">Reference</a></li>
       </ul>
     </nav>
+    <div class="overlay"></div>
     <main id="main-doc">
       <div id="main-doc-container">
         <section class="main-section" id="introduction">
