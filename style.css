@@ -81,13 +81,20 @@ li {
   top: 0;
   left: 0;
   right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 32px;
   width: 100%;
   height: 72px;
   background: #333333;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   z-index: 5;
 }
@@ -107,11 +114,17 @@ li {
   background: #fff;
   font-size: 90%;
   overflow-y: auto;
+  -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    -webkit-transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 4;
 }
 #navbar.navlist-open {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 #navbar ul {
@@ -135,6 +148,7 @@ li {
   text-align: left;
   width: 100%;
   color: #555;
+  -webkit-transition: background 0.4s linear;
   transition: background 0.4s linear;
 }
 .active-link {
@@ -153,9 +167,18 @@ h2 {
   margin-top: 0;
 }
 #main-doc-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
 }
@@ -175,6 +198,7 @@ h2 {
 #main-doc a {
   color: #333;
   font-weight: 600;
+  -webkit-transition: all 0.05s ease-in-out;
   transition: all 0.05s ease-in-out;
 }
 #main-doc a:hover,
@@ -322,6 +346,7 @@ button span {
   bottom: 0;
   background-color: rgba(51, 51, 51, 0.9);
   opacity: 0;
+  -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
   pointer-events: none;
 }
@@ -332,7 +357,9 @@ button span {
 .overlay-visible {
   opacity: 1;
   pointer-events: all;
+  -webkit-transform: translateY(0);
   transform: translateY(0);
+  -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
 }
 
@@ -357,10 +384,13 @@ Media queries
     padding-right: 0;
   }
   #navbar {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   .top-bar {
     padding-left: 40px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
   }
   .open-button {
