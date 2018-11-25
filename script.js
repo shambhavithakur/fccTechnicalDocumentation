@@ -1,4 +1,5 @@
 // Open-close navigation list
+var getHTMLRoot = document.getElementsByTagName("html")[0];
 var togglerOpen = document.querySelector(".open-button");
 var navListOpen = document.querySelector("#navbar");
 var getOverlay = document.querySelector(".overlay");
@@ -9,6 +10,7 @@ function openNavlist(event) {
   togglerOpen.classList.toggle("open-list");
   navListOpen.classList.toggle("navlist-open");
   getOverlay.classList.toggle("overlay-visible");
+  getHTMLRoot.classList.toggle("prevent-scrolling");
 }
 
 function closeNavlist(event) {
@@ -16,6 +18,7 @@ function closeNavlist(event) {
   togglerOpen.classList.remove("open-list");
   navListOpen.classList.remove("navlist-open");
   getOverlay.classList.remove("overlay-visible");
+  getHTMLRoot.classList.remove("prevent-scrolling");
 }
 
 togglerOpen.addEventListener("click", openNavlist);
@@ -41,5 +44,6 @@ for (var i = 0; i < getNavLinks.length; i++) {
     togglerOpen.classList.remove("open-list");
     navListOpen.classList.remove("navlist-open");
     getOverlay.classList.remove("overlay-visible");
+    getHTMLRoot.classList.remove("prevent-scrolling");
   });
 }

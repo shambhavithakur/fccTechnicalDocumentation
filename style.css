@@ -47,7 +47,7 @@ html {
 }
 body {
   margin: 0;
-  padding-top: 68px;
+  padding-top: 72px;
   width: 100%;
   min-height: 100%;
   line-height: 1.75;
@@ -109,7 +109,7 @@ li {
   top: 0;
   bottom: 0;
   width: 280px;
-  padding: 68px 0 40px;
+  padding: 72px 0 40px;
   border-right: 1px solid rgb(240, 240, 240);
   background: #fff;
   font-size: 90%;
@@ -159,9 +159,12 @@ li {
 #navbar a:hover {
   background: rgba(0, 0, 0, 0.04);
 }
-
 #navbar a:active {
   background: rgba(0, 0, 0, 0.2);
+}
+.prevent-scrolling {
+  position: fixed;
+  overflow-y: scroll;
 }
 h2 {
   margin-top: 0;
