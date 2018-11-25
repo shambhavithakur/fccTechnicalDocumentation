@@ -163,8 +163,7 @@ li {
   background: rgba(0, 0, 0, 0.2);
 }
 .prevent-scrolling {
-  position: fixed;
-  overflow-y: scroll;
+  overflow: hidden;
 }
 h2 {
   margin-top: 0;
@@ -352,10 +351,6 @@ button span {
   -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
   pointer-events: none;
-}
-.prevent-scrolling {
-  position: fixed;
-  overflow-y: scroll;
 }
 .overlay-visible {
   opacity: 1;
